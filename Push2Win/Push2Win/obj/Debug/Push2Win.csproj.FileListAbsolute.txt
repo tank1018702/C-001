@@ -1,0 +1,42 @@
+C:\Users\zhm12\Desktop\Push2Win\Push2Win\Push2Win\obj\Debug\Push2Win.csprojResolveAssemblyReference.cache
+C:\Users\zhm12\Desktop\Push2Win\Push2Win\Push2Win\obj\Debug\Push2Win.csproj.CoreCompileInputs.cache
+C:\Users\zhm12\Desktop\Push2Win\Push2Win\Push2Win\bin\Debug\Push2Win.exe.config
+C:\Users\zhm12\Desktop\Push2Win\Push2Win\Push2Win\bin\Debug\Push2Win.exe
+C:\Users\zhm12\Desktop\Push2Win\Push2Win\Push2Win\bin\Debug\Push2Win.pdb
+C:\Users\zhm12\Desktop\Push2Win\Push2Win\Push2Win\obj\Debug\Push2Win.exe
+C:\Users\zhm12\Desktop\Push2Win\Push2Win\Push2Win\obj\Debug\Push2Win.pdb
+G:\Push2Win\Push2Win\bin\Debug\Push2Win.exe.config
+G:\Push2Win\Push2Win\bin\Debug\Push2Win.exe
+G:\Push2Win\Push2Win\bin\Debug\Push2Win.pdb
+G:\Push2Win\Push2Win\obj\Debug\Push2Win.csprojAssemblyReference.cache
+G:\Push2Win\Push2Win\obj\Debug\Push2Win.csproj.CoreCompileInputs.cache
+G:\Push2Win\Push2Win\obj\Debug\Push2Win.exe
+G:\Push2Win\Push2Win\obj\Debug\Push2Win.pdb
+G:\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.csprojAssemblyReference.cache
+G:\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.csproj.CoreCompileInputs.cache
+G:\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.exe
+G:\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.pdb
+G:\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.exe.config
+G:\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.exe
+G:\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.pdb
+C:\Users\Administrator\Documents\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.exe.config
+C:\Users\Administrator\Documents\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.exe
+C:\Users\Administrator\Documents\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.pdb
+C:\Users\Administrator\Documents\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.exe
+C:\Users\Administrator\Documents\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.pdb
+E:\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.exe.config
+E:\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.exe
+E:\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.csprojResolveAssemblyReference.cache
+E:\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.csproj.CoreCompileInputs.cache
+E:\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.exe
+E:\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\obj\Debug\Push2Win.pdb
+E:\trunk201805\students\zhouheming\控制台游戏\Push2Win\Push2Win\bin\Debug\Push2Win.pdb
+E:\C#\Baba Is You\Push2Win\Push2Win\bin\Debug\Push2Win.exe.config
+E:\C#\Baba Is You\Push2Win\Push2Win\bin\Debug\Push2Win.exe
+E:\C#\Baba Is You\Push2Win\Push2Win\bin\Debug\Push2Win.pdb
+E:\C#\Baba Is You\Push2Win\Push2Win\obj\Debug\Push2Win.csprojResolveAssemblyReference.cache
+E:\C#\Baba Is You\Push2Win\Push2Win\obj\Debug\Push2Win.csproj.CoreCompileInputs.cache
+E:\C#\Baba Is You\Push2Win\Push2Win\obj\Debug\Push2Win.exe
+E:\C#\Baba Is You\Push2Win\Push2Win\obj\Debug\Push2Win.pdb

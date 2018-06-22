@@ -1,0 +1,7 @@
+E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\bin\Debug\PushToWin.exe.config
+E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\bin\Debug\PushToWin.exe
+E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\bin\Debug\PushToWin.pdb
+E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.csprojResolveAssemblyReference.cache
+E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.csproj.CoreCompileInputs.cache
+E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.exe
+E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.pdb
