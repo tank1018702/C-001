@@ -46,11 +46,11 @@ namespace PushToWin
         public void RemoveLogic(LogicType type)
         {
             logic_type = logic_type & (~type);
-        }
-        
-
-       
+        }    
     }
+    
+
+
 
 
     [Flags]

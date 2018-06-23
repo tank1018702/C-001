@@ -5,3 +5,10 @@ E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.csprojRes
 E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.csproj.CoreCompileInputs.cache
 E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.exe
 E:\C#\Baba Is You\PushToWin_sy\PushToWin\PushToWin\obj\Debug\PushToWin.pdb
+E:\C#_Git\001\PushToWin_Modified version\PushToWin\PushToWin\bin\Debug\PushToWin.exe.config
+E:\C#_Git\001\PushToWin_Modified version\PushToWin\PushToWin\bin\Debug\PushToWin.exe
+E:\C#_Git\001\PushToWin_Modified version\PushToWin\PushToWin\bin\Debug\PushToWin.pdb
+E:\C#_Git\001\PushToWin_Modified version\PushToWin\PushToWin\obj\Debug\PushToWin.csprojResolveAssemblyReference.cache
+E:\C#_Git\001\PushToWin_Modified version\PushToWin\PushToWin\obj\Debug\PushToWin.csproj.CoreCompileInputs.cache
+E:\C#_Git\001\PushToWin_Modified version\PushToWin\PushToWin\obj\Debug\PushToWin.exe
+E:\C#_Git\001\PushToWin_Modified version\PushToWin\PushToWin\obj\Debug\PushToWin.pdb

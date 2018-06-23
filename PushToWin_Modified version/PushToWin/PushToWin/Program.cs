@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PushToWin
 {
-  public  class Program
+    public class Program
     {
         static int width = 18;
         static int height = 18;
@@ -16,7 +16,6 @@ namespace PushToWin
         static ConsoleColor[,] color_buffer;
 
         static List<GameObject> all_objs = new List<GameObject>();
-
 
 
         static void Main(string[] args)
@@ -32,7 +31,7 @@ namespace PushToWin
             StageLogic();
 
 
-            
+
             Console.ReadKey();
 
 
@@ -45,6 +44,7 @@ namespace PushToWin
 
         static void StageLogic()
         {
+            DrawBox();
             List<string> file = FileManager.ReadMapFile("../../TEST.txt");
             all_objs.AddRange(GameLogic.GameObjectInit(file));
             Map map = new Map(width, height);
@@ -77,7 +77,7 @@ namespace PushToWin
                         step--;
                         all_objs.Clear();
                         all_objs.AddRange(history[step]);
-                        
+
                     }
                 }
 
@@ -92,19 +92,42 @@ namespace PushToWin
             }
         }
 
-       public static void DrawALL()
+        public static void DrawALL()
         {
-          
+            all_objs.Sort((a, b) => a.logic_type.CompareTo(b.logic_type));
             foreach (var obj in all_objs)
             {
                 if (obj.Icon != "")
                 {
                     buffer[obj.x, obj.y] = obj.Icon;
                 }
-                
+
                 color_buffer[obj.x, obj.y] = obj.color;
+
             }
-        }    
+
+        }
+        static void DrawBox()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            for(int i=0;i<20;i++)
+            {
+                for(int j=0;j<20;j++)
+                {
+                    if((i==0)||(i==19)||(j==0)||(j==19))
+                    {
+                        
+                        Console.Write("■");
+                    }
+                    else
+                    {
+                        Console.Write("  ");
+                    }
+                    
+                }
+                Console.WriteLine();
+            }
+        }
     }
 
     public class GameLogic
@@ -112,6 +135,7 @@ namespace PushToWin
         public const int map_width = 18;
         public const int map_height = 18;
         public static List<GameObject> AllGameObjects = new List<GameObject>();
+
 
         public static List<GameObject> GameObjectInit(List<string> file)
         {
@@ -121,7 +145,7 @@ namespace PushToWin
                 char[] line = file[i].ToCharArray();
                 for (int j = 0; j < line.Length; j++)
                 {
-                    if(line[j]==' ')
+                    if (line[j] == ' ')
                     {
                         continue;
                     }
@@ -166,7 +190,7 @@ namespace PushToWin
             {
                 n = 5;
             }
-            else if (tag == '☀')
+            else if (tag == '※')
             {
                 n = 6;
             }
@@ -262,6 +286,10 @@ namespace PushToWin
 
             if (n < 10)
             {
+                if(n==8)
+                {
+                    return;
+                }
                 obj.Icon = Data.GameObjectIcon[n];
                 obj.color = Data.GameObjectColors[n];
                 obj.object_type = ObjectType.eneity;
@@ -269,21 +297,21 @@ namespace PushToWin
                 //{
                 //    obj.
                 //}
-                
+
             }
             else if (n < 20)
             {
                 obj.Icon = Data.GameObjectChar[n - 10];
                 obj.color = Data.GameObjectColors[n - 10];
                 obj.contect_Icon = Data.GameObjectIcon[n - 10];
-                obj.logic_type = LogicType.Null | LogicType.Push|LogicType.Subject|LogicType.Object;
+                obj.logic_type = LogicType.Null | LogicType.Push | LogicType.Subject | LogicType.Object;
                 obj.object_type = ObjectType.noun;
             }
             else if (n < 30)
             {
                 obj.Icon = Data.behaviourNames[n - 20];
                 obj.color = Data.behaviourColors[n - 20];
-                obj.logic_type = LogicType.Null | LogicType.Push|LogicType.Object;
+                obj.logic_type = LogicType.Null | LogicType.Push | LogicType.Object;
                 obj.object_type = ObjectType.verb;
 
             }
@@ -550,8 +578,10 @@ namespace PushToWin
         //    }
         //    return true;
         //}
+        //只检测移动逻辑
         static bool CheckDirectionLogic(GameObject caller, Direction dir)
         {
+
             var next_objs = GetObjectsByDir(caller.x, caller.y, dir);
             if (next_objs.Count == 0)
             {
@@ -567,30 +597,48 @@ namespace PushToWin
                 {
                     return CanMove(obj, dir);
                 }
-                if (obj.HasLogic(LogicType.Sink))
+            }
+            return true;
+        }
+
+        static void CheckBehaviorlogic(GameObject player)
+        {
+            List<GameObject> temp = GetObjectsByPos(player.x, player.y);
+            if (temp.Count <= 1)
+            {
+                return;
+            }
+            foreach (var t in temp)
+            {
+                if (t.HasLogic(LogicType.Sink))
                 {
-                    if(caller.HasLogic(LogicType.Object)|caller.HasLogic(LogicType.Subject))
+                    if (player.HasLogic(LogicType.Object) || player.HasLogic(LogicType.Subject))
                     {
-                        return true;
+                        continue;
                     }
-                    AllGameObjects.Remove(caller);
-                    AllGameObjects.Remove(obj);
-                    Program.DrawALL();
-                    return false;
-
+                    t.Icon = "";
+                    t.logic_type = LogicType.Null;
+                    player.Icon = "";
+                    player.logic_type = LogicType.Null;
                 }
-                if (obj.HasLogic(LogicType.Win))
+                if(t.HasLogic(LogicType.Kill))
                 {
-
+                    player.Icon = "";
+                    player.logic_type = LogicType.Null;
                 }
-                if (obj.HasLogic(LogicType.Kill))
+                if(t.HasLogic(LogicType.Win))
                 {
 
                 }
             }
-            return true;
+            
+
         }
-        
+
+        static void SetBehaviorLogic(List<GameObject> list)
+        {
+
+        }
 
         //返回是否能改变坐标,若能并移动
         static bool CanMove(GameObject obj, Direction dir)
@@ -598,37 +646,38 @@ namespace PushToWin
             switch (dir)
             {
                 case Direction.Left:
-                    if (obj.x == 0|| !CheckDirectionLogic(obj, dir))
+                    if (obj.x == 0 || !CheckDirectionLogic(obj, dir))
                     {
                         return false;
                     }
                     obj.x -= 1;
                     break;
                 case Direction.Right:
-                    if (obj.x == map_width - 1||!CheckDirectionLogic(obj, dir))
+                    if (obj.x == map_width - 1 || !CheckDirectionLogic(obj, dir))
                     {
                         return false;
                     }
                     obj.x += 1;
                     break;
                 case Direction.Up:
-                    if (obj.y == 0||!CheckDirectionLogic(obj, dir))
+                    if (obj.y == 0 || !CheckDirectionLogic(obj, dir))
                     {
                         return false;
                     }
                     obj.y -= 1;
                     break;
                 case Direction.Down:
-                    if (obj.y == map_height - 1|| !CheckDirectionLogic(obj, dir))
+                    if (obj.y == map_height - 1 || !CheckDirectionLogic(obj, dir))
                     {
                         return false;
                     }
                     obj.y += 1;
                     break;
             }
+            CheckBehaviorlogic(obj);
             return true;
         }
-        
+
         static List<GameObject> FindAllPlayers()
         {
             var playerlist = new List<GameObject>();
@@ -653,20 +702,20 @@ namespace PushToWin
             }
             return tars;
         }
-        static void RemoveObjectsByPos(int x,int y)
+        static void RemoveObjectsByPos(int x, int y)
         {
-            for(int i=0;i<AllGameObjects.Count;i++)
+            for (int i = 0; i < AllGameObjects.Count; i++)
             {
-                if(AllGameObjects[i].x==x&&AllGameObjects[i].y==y)
+                if (AllGameObjects[i].x == x && AllGameObjects[i].y == y)
                 {
                     AllGameObjects.Remove(AllGameObjects[i]);
                 }
             }
         }
 
-        static List<GameObject> GetObjectsByDir(int x,int y,Direction dir)
+        static List<GameObject> GetObjectsByDir(int x, int y, Direction dir)
         {
-            switch(dir)
+            switch (dir)
             {
                 case Direction.Left:
                     x -= 1;
@@ -723,19 +772,21 @@ namespace PushToWin
                     return 0;
 
             }
-            int container=0;
+            int container = 0;
             foreach (var player in AllPlayers)
-            {       
-                if(!CanMove(player,dir))
+            {
+                if (!CanMove(player, dir))
                 {
                     continue;
                 }
-                container++;        
+                
+                container++;
             }
             if (container == 0)
             {
                 return 0;
             }
+           
             return 1;
         }
     }

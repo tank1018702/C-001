@@ -8,7 +8,7 @@ namespace PushToWin
 {
     public static class Data
     {
-        public static string[] GameObjectIcon = { "■", "●", "♀", "★", "**", "∷", "☀", "♂" , "" };
+        public static string[] GameObjectIcon = { "■", "●", "♀", "★", "**", "∷", "※", "♂" , "" };
 
         public static string[] GameObjectChar = { "墙", "球", "女", "星", "草", "水", "火", "男" ,"空"};
 
